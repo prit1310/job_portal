@@ -102,7 +102,7 @@ const forgotPassword = async (req, res) => {
     user.resetPasswordToken = resetToken;
     await user.save();
 
-    const resetLink = `https://localhost:5173/reset-password?token=${resetToken}`;
+    const resetLink = `https://job-portal-h7sp.onrender.com/reset-password?token=${resetToken}`;
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
